@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class AuthByEmail extends TestBase {
 
   @Test
@@ -13,6 +15,6 @@ public class AuthByEmail extends TestBase {
     driver.findElement(By.xpath(authInput)).sendKeys("kabi.a@chocolife.kz", Keys.ENTER);
     driver.findElement(By.xpath(pass)).sendKeys("87783423808zZ");
     driver.findElement(By.xpath(btnAuthVoiti)).click();
-    driver.findElement(By.xpath(profileText)).isDisplayed();
+    assertTrue(driver.findElement(By.xpath(profileText)).isDisplayed());
   }
 }
