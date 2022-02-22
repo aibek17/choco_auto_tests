@@ -13,7 +13,10 @@ import java.util.concurrent.TimeUnit;
 public class TestBase {
   String mainDevUrl = "https://chocodev.kz/";
   WebDriver driver;
+  //WebElement btnVoiti = driver.findElement(By.xpath("//button[@class='profile__login cl-btn']"));
+  //WebElement authInput = driver.findElement(By.xpath("//div/input[@class='form-control']"));
   String btnVoiti = "//button[@class='profile__login cl-btn']";
+  String authInput = "//div/input[@class='form-control']";
 
   @BeforeEach
   public void start() {
