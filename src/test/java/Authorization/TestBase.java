@@ -27,6 +27,6 @@ public class TestBase {
 
   @AfterEach
   public void finish() {
-    //driver.quit();
+    driver.quit();
   }
 }
