@@ -7,8 +7,4 @@ public class TaskOne extends BasePage{
   public TaskOne(WebDriver driver) {
     super(driver);
   }
-
-  public void checkPageIsCorrect (){
-    isElementDisplayed(By.xpath("//span[@class=\'profile__text\']"));
-  }
 }

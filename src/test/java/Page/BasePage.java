@@ -28,6 +28,12 @@ public class BasePage {
     driver.findElement(elementBy).click();
   }
 
+  //Метод для ввода текста
+  public void inputField (By elementBy){
+    waitVisibility(elementBy);
+    driver.findElement(elementBy).sendKeys();
+  }
+
   //Отображается ли элемент
   public void isElementDisplayed (By elementBy){
     waitVisibility(elementBy);

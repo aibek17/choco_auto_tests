@@ -1,6 +1,7 @@
-package Authorization;
+package Tests;
 
 import Page.Main;
+import Page.TaskAuth;
 import Page.TaskOne;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
@@ -12,16 +13,14 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
-  String mainDevUrl = "https://chocodev.kz/";
-  String mainProdUrl = "https://chocolife.me/";
   WebDriver driver;
   public Main main;
   public TaskOne taskOne;
-  String btnVoiti = "//button[@class='profile__login cl-btn']";
-  String authInput = "//div/input[@class='form-control']";
+  public TaskAuth taskAuth;
+  String mainDevUrl = "https://chocodev.kz/";
+  String mainProdUrl = "https://chocolife.me/";
+  String login = "//div/input[@class='form-control']";
   String pass = "//div/input[@type=\'password\']";
-  String btnAuthVoiti = "//button[@class=' choco-button orange']";
-  String profileText = "//span[@class=\'profile__text\']";
 
   @BeforeEach
   public void start() {
@@ -31,6 +30,7 @@ public class TestBase {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     main = PageFactory.initElements(driver, Main.class);
     taskOne = PageFactory.initElements(driver, TaskOne.class);
+    taskAuth = PageFactory.initElements(driver, TaskAuth.class);
   }
 
   @AfterEach

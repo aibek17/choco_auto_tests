@@ -14,10 +14,4 @@ public class Main extends BasePage{
     driver.get(mainProdUrl);
     return this;
   }
-
-  public Main butVhod (){
-    click(By.xpath("//button[@class='profile__login cl-btn']"));
-    return this;
-  }
-
 }
