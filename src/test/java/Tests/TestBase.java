@@ -2,7 +2,7 @@ package Tests;
 
 import Page.Main;
 import Page.TaskAuth;
-import Page.TaskOne;
+import Page.TaskSearch;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,12 +15,14 @@ import java.util.concurrent.TimeUnit;
 public class TestBase {
   WebDriver driver;
   public Main main;
-  public TaskOne taskOne;
+  public TaskSearch taskSearch;
   public TaskAuth taskAuth;
-  String mainDevUrl = "https://chocodev.kz/";
-  String mainProdUrl = "https://chocolife.me/";
-  String login = "//div/input[@class='form-control']";
-  String pass = "//div/input[@type=\'password\']";
+  String login = "//div/input[@class='form-control']";    //Поле для ввода логина в форме авторизации
+  String pass = "//div/input[@type=\'password\']";    //Поле для ввода пароля в форме авторизации
+  String searchArea = "//div/input[@class='ng-untouched ng-pristine ng-valid']"; //Поле для поиска на главной странице
+//  String mainDevUrl = "https://chocodev.kz/";
+//  String mainProdUrl = "https://chocolife.me/";
+//  String bunVhod = "//button[@class='profile__login cl-btn']";   //кнопка "Войти"
 
   @BeforeEach
   public void start() {
@@ -29,7 +31,7 @@ public class TestBase {
     driver.manage().window().maximize();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     main = PageFactory.initElements(driver, Main.class);
-    taskOne = PageFactory.initElements(driver, TaskOne.class);
+    taskSearch = PageFactory.initElements(driver, TaskSearch.class);
     taskAuth = PageFactory.initElements(driver, TaskAuth.class);
   }
 
