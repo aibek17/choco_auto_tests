@@ -17,9 +17,14 @@ public class TestBase {
   public TaskAuth taskAuth;
   public TaskChangeCity taskChangeCity;
   public TaskNewDeals taskNewDeals;
+  public TaskBanners taskBanners;
+  public TaskMyData taskMyData;
   String login = "//div/input[@class='form-control']";    //Поле для ввода логина в форме авторизации
   String pass = "//div/input[@type=\'password\']";    //Поле для ввода пароля в форме авторизации
   String searchArea = "//div/input[@class='ng-untouched ng-pristine ng-valid']"; //Поле для поиска на главной странице
+  String changeNumbArea = "//div/input[@class='ng-untouched ng-pristine ng-invalid']";
+  String areaForChangePassOne = "//input[@class='ng-untouched ng-pristine ng-invalid'][1]";
+
 
   @BeforeEach
   public void start() {
@@ -32,6 +37,8 @@ public class TestBase {
     taskAuth = PageFactory.initElements(driver, TaskAuth.class);
     taskChangeCity = PageFactory.initElements(driver, TaskChangeCity.class);
     taskNewDeals = PageFactory.initElements(driver, TaskNewDeals.class);
+    taskBanners = PageFactory.initElements(driver, TaskBanners.class);
+    taskMyData = PageFactory.initElements(driver, TaskMyData.class);
   }
 
   @AfterEach

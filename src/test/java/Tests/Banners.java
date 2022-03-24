@@ -6,6 +6,7 @@ public class Banners extends TestBase{
 
   @Test
   public void firstTest(){
-
+    main.goTo();
+    taskBanners.bannerIsDisplayed();
   }
 }

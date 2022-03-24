@@ -45,13 +45,13 @@ public class AuthByEmail extends TestBase {
     taskAuth.checkRegPage();
   }
 
-//  @Test
-//  public void BtnShowPass(){
-//    main.goTo();
-//    taskAuth.butVhod();
-//    driver.findElement(By.xpath(login)).sendKeys("kabi.a@chocolife.kz", Keys.ENTER);
-//    driver.findElement(By.xpath(pass)).sendKeys("qwerty123");
-//    taskAuth.btnShowPass();
-//    taskAuth.checkTextWrongPass();
-//  }
+  @Test
+  public void BtnShowPass(){
+    main.goTo();
+    taskAuth.butVhod();
+    driver.findElement(By.xpath(login)).sendKeys("kabi.a@chocolife.kz", Keys.ENTER);
+    driver.findElement(By.xpath(pass)).sendKeys("qwerty123");
+    taskAuth.btnShowPass();
+    taskAuth.checkShowPass();
+  }
 }

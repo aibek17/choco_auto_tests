@@ -30,7 +30,7 @@ public class TaskAuth extends BasePage{
   }
 
   public void checkShowPass (){
-    isElementDisplayed(By.xpath("//div[contains(text(), 'Неверный текущий пароль')]"));
+    isElementDisplayed(By.xpath("//div/img[@src='https://oauth.object.pscloud.io/images/eye-icon.svg?v=1c5d2bc8219a3606a759e99609b068d1']"));
   }
 
   public void btnChangeEmail(){
@@ -43,5 +43,9 @@ public class TaskAuth extends BasePage{
 
   public void checkRegPage (){
     isElementDisplayed(By.xpath("//div/a[contains(text(), 'Регистрация Choco-аккаунта')]"));
+  }
+
+  public void btnSkeepBlackScreen(){
+    click(By.xpath("//div[@class='tip']"));
   }
 }
