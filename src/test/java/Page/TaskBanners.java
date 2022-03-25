@@ -9,6 +9,6 @@ public class TaskBanners extends BasePage{
   }
 
   public void bannerIsDisplayed (){
-    isElementDisplayed(By.xpath("//a/img[@class='banner_img'][5]"));
+    isElementDisplayed(By.xpath("//div[@class='banners__wrp']"));
   }
 }
