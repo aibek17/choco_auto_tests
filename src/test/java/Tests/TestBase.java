@@ -23,6 +23,9 @@ public class TestBase {
   public TaskMyData taskMyData;
   public TaskPurchases taskPurchases;
   public TaskUserNotification taskUserNotification;
+  public TaskUserQuestions taskUserQuestions;
+  public TaskFavorDeal taskFavorDeal;
+  public TaskBasket taskBasket;
   String login = "//div/input[@class='form-control']";    //Поле для ввода логина в форме авторизации
   String pass = "//div/input[@type=\'password\']";    //Поле для ввода пароля в форме авторизации
   String searchArea = "//div/input[@class='ng-untouched ng-pristine ng-valid']"; //Поле для поиска на главной странице
@@ -55,6 +58,9 @@ public class TestBase {
     taskMyData = PageFactory.initElements(driver, TaskMyData.class);
     taskPurchases = PageFactory.initElements(driver, TaskPurchases.class);
     taskUserNotification = PageFactory.initElements(driver, TaskUserNotification.class);
+    taskUserQuestions = PageFactory.initElements(driver, TaskUserQuestions.class);
+    taskFavorDeal = PageFactory.initElements(driver, TaskFavorDeal.class);
+    taskBasket = PageFactory.initElements(driver, TaskBasket.class);
   }
 
   @AfterEach

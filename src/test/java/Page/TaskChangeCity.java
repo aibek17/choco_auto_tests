@@ -9,9 +9,13 @@ public class TaskChangeCity extends BasePage{
   public TaskChangeCity(WebDriver driver) {
     super(driver);
   }
-
-  public void buttonChCi(){
+  //div[@class='cities']
+  //div/button[@class='cl-btn cl-btn--secondary']
+  public void s(){
     click(By.xpath("//div/button[@class='cl-btn cl-btn--secondary']"));
+  }
+  public void buttonChCi(){
+    click(By.xpath("//div[@class='cities']"));
   }
 
   public void changeToZhes(){

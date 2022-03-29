@@ -25,7 +25,7 @@ public class TaskPurchases extends BasePage {
   }
 
   public void isExpPurchDisp() {
-    isElementDisplayed(By.xpath("//h4[contains(text(), 'Test 5')]"));
+    isElementDisplayed(By.xpath("//h4[contains(text(), 'CarCat')]"));
   }
 
   public void sectionUsed() {

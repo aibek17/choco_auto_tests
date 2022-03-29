@@ -8,13 +8,18 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AuthByEmail extends TestBase {
 
-  @Test
-  public void correctFlow(){
+  public void authByEmail(){
     main.goTo();
     taskAuth.butVhod();
     driver.findElement(By.xpath(login)).sendKeys("kabi.a@chocolife.kz", Keys.ENTER);
     driver.findElement(By.xpath(pass)).sendKeys("87783423808zZ");
     taskAuth.btnAuthVoiti();
+    taskAuth.btnSkeepBlackScreen();
+  }
+
+  @Test
+  public void correctFlow(){
+    authByEmail();
     taskAuth.checkPageIsCorrect();
   }
 
@@ -23,7 +28,7 @@ public class AuthByEmail extends TestBase {
     main.goTo();
     taskAuth.butVhod();
     driver.findElement(By.xpath(login)).sendKeys("kabi.a@chocolife.kz", Keys.ENTER);
-    driver.findElement(By.xpath(pass)).sendKeys("qwerty123");
+    driver.findElement(By.xpath(pass)).sendKeys("87783423808aA");
     taskAuth.btnAuthVoiti();
     taskAuth.checkTextWrongPass();
   }
