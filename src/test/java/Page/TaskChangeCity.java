@@ -4,14 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class TaskChangeCity extends BasePage{
-//  String zhes = "Жезказган";
 
   public TaskChangeCity(WebDriver driver) {
     super(driver);
   }
   //div[@class='cities']
   //div/button[@class='cl-btn cl-btn--secondary']
-  public void s(){
+  public void buttonChCiChi(){
     click(By.xpath("//div/button[@class='cl-btn cl-btn--secondary']"));
   }
   public void buttonChCi(){
