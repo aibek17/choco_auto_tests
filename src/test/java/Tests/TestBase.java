@@ -26,6 +26,7 @@ public class TestBase {
   public TaskUserQuestions taskUserQuestions;
   public TaskFavorDeal taskFavorDeal;
   public TaskBasket taskBasket;
+  public Page.taskPayBCard taskPayBCard;
   String login = "//div/input[@class='form-control']";    //Поле для ввода логина в форме авторизации
   String pass = "//div/input[@type=\'password\']";    //Поле для ввода пароля в форме авторизации
   String searchArea = "//div/input[@class='ng-untouched ng-pristine ng-valid']"; //Поле для поиска на главной странице
@@ -61,10 +62,11 @@ public class TestBase {
     taskUserQuestions = PageFactory.initElements(driver, TaskUserQuestions.class);
     taskFavorDeal = PageFactory.initElements(driver, TaskFavorDeal.class);
     taskBasket = PageFactory.initElements(driver, TaskBasket.class);
+    taskPayBCard = PageFactory.initElements(driver, Page.taskPayBCard.class);
   }
 
   @AfterEach
   public void finish() {
-    driver.quit();
+    //driver.quit();
   }
 }

@@ -83,7 +83,7 @@ public class ChangeCity extends TestBase{
 //    taskChangeCity.buttonChCi();
 //    taskChangeCity.changeToAla();
 //    taskChangeCity.cityIsAla();
-//  }
+//}
 //
 //  @Test
 //  public void changeCityAst() throws InterruptedException {

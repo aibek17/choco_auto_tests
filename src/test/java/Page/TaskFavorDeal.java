@@ -9,7 +9,7 @@ public class TaskFavorDeal extends BasePage{
   }
 
   public void btnAddToFavDeal() {
-    click(By.xpath("//span[contains(text(), 'в избранное')]"));
+    click(By.xpath("//*[@id=\"cl-main\"]/cl-deals/cl-deals-detail/div/section[2]/div[1]/div[5]/button"));
   }
 
   public void btnFavPage() {

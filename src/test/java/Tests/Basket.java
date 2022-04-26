@@ -13,7 +13,7 @@ public class Basket extends TestBase{
     driver.findElement(By.xpath(pass)).sendKeys("87783423808zZ");
     taskAuth.btnAuthVoiti();
     taskAuth.btnSkeepBlackScreen();
-    taskChangeCity.buttonChCi();
+    taskChangeCity.buttonChCiChi();
     taskChangeCity.changeToUra();
   }
 

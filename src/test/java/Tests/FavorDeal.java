@@ -13,19 +13,21 @@ public class FavorDeal extends TestBase{
     driver.findElement(By.xpath(pass)).sendKeys("87783423808zZ");
     taskAuth.btnAuthVoiti();
     taskAuth.btnSkeepBlackScreen();
-    taskChangeCity.buttonChCi();
+    taskChangeCity.buttonChCiChi();
     taskChangeCity.changeToUra();
   }
 
   @Test
-  public void addToFavFromDealPageDelOne(){    //Добавление в избранное со страницы акции и удаление с избранного со страницы Избранное
+  public void addToFavFromDealPageDelOne() throws InterruptedException {    //Добавление в избранное со страницы акции и удаление с избранного со страницы Избранное
     goToDealPage();
     driver.findElement(By.xpath(searchArea)).sendKeys("CarCat", Keys.ENTER);
     main.goToDeal();
+    Thread.sleep(4000);
     taskFavorDeal.btnAddToFavDeal();
     taskFavorDeal.isFavNumbDisp();   //Отображение количество акций в хэдере возле "Избранное"
     taskFavorDeal.btnFavPage();
     taskFavorDeal.isDealDispInFavPage();   //Отображение акции на странице избранное
+    Thread.sleep(2000);
     taskFavorDeal.btnOffFavDeal();
     taskFavorDeal.isFavDealNotF();   //Проверка на то, что акция успешно удалилась с избранного
   }
